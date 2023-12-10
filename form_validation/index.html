@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validataion</title>
+    <link rel="stylesheet " href="./index.css">
+</head>
+<body>
+    
+    <section class="container">
+
+        <div class="form_container">
+
+            <div class="feild_holder">
+                <input type="text" placeholder="Enter Name" onkeyup="displayMessages(event)" id="name">
+                <div class="tooltip" id="name_error">
+                    Please Enter the name correctily
+                </div>
+            </div>
+            <div class="feild_holder">
+                <input type="email" placeholder="Enter Email" onkeyup="displayMessages(event)" id="email">
+                <div class="tooltip" id="email_error">
+                    Please Enter the name correctily
+                </div>
+            </div>
+            <div class="feild_holder">
+                <input type="password" placeholder="Enter Password" onkeyup="displayMessages(event)" id="password">
+                <div class="tooltip" id="password_error">
+                    Please Enter the name correctily
+                </div>
+            </div>
+
+            
+            <button>Register</button>
+        </div>
+
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>

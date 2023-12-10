@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>pms Frontend</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+
+    <section class="products">
+        <div class="create_product" id="create_products">
+            <div class="product_details">
+                <i class="fa-solid fa-circle-xmark close" onclick = "closel('create_products')"></i>
+                <input type="number" placeholder="Enter the ID of Product" class="id" id="cr_id">
+                <input type="text" placeholder="Enter the Name of Product" class="name" id="cr_name">
+                <input type="number" placeholder="Enter the Price of Product" class="price" id="cr_price">
+                <input type="number" placeholder="Enter the Quantity of Product" class="quantity" id="cr_quantity">
+
+                <button class="btn create_btn" onclick="createProduct()"> Create Product</button>
+            </div>
+        </div>
+        <div class="product_title">
+
+            <h1 class="title">All Products</h1>
+
+            <div class="btn" onclick="openl('create_products')">
+                Create Product
+            </div>
+
+        </div>
+        <div class="product_container">
+            <div class="table_container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr no</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="create_product " id="update_products">
+            <div class="product_details">
+                <i class="fa-solid fa-circle-xmark close" onclick ="closel('update_products')"></i>
+                <input type="number" placeholder="Enter the ID of Product" class="id" id="up_id">
+                <input type="text" placeholder="Enter the Name of Product" class="name" id="up_name">
+                <input type="number" placeholder="Enter the Price of Product" class="price" id="up_price">
+                <input type="number" placeholder="Enter the Quantity of Product" class="quantity" id="up_quantity">
+
+                <button class="btn create_btn" onclick="UpdateProducts()"> Update Product</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

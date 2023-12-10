@@ -1,0 +1,68 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.header_container{
+    height: 10vh;
+    width: 80%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: inherit;
+    width: 30%;
+    background:linear-gradient(to right,rgb(250, 158, 174),rgb(109, 206, 245));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.title{
+    font-family: segoe UI;
+    font-size: 50px;
+    color: transparent;
+}
+
+.navigation{
+    width: 30%;
+    height: 10vh;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 15px ;
+    font-family: segoe UI;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    background-color: rgb(65, 137, 204);
+    color: white;
+}
+
+
+
+
+.main{
+    height: 90vh;
+    width: 100%;
+    background:linear-gradient(pink,skyblue);
+}

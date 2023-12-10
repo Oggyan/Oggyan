@@ -1,0 +1,303 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 10px 10%;
+    background-color: lightgrey;
+    display: flex;
+}
+
+.logo{
+    width: 15%;
+    height: 70px;
+    background: linear-gradient( pink, skyblue) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: segoe UI;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.data{
+    padding: 30px 10%;
+    /* background-color: rgb(185, 185, 185); */
+    display: flex ;
+    flex-direction: column;
+}
+
+.data_header{
+    width: 100%;
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: segoe UI;
+}
+
+.data_header > h1{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.btn{
+    padding: 14px 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    border : none;
+    background-color: rgb(37, 127, 201);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.data_header >button:hover{
+    background-color: rgb(42, 88, 214);
+    scale: 1.02;
+    /* box-shadow: 0 0  10px grey; */
+
+}
+.data_header >button:active{
+    background-color: rgb(37, 127, 201);
+}
+
+.data_table{
+    margin-top: 20px;
+    /* padding: 10px ; */
+    /* background-color: darkgray; */
+}
+
+
+table{
+    width: 100%;
+    font-family: segoe UI;
+}
+
+table th{
+    font-size: 20px;
+    font-weight: 500;
+}
+th{
+
+    background-color: rgb(37, 127, 201);
+    color: white;
+}
+
+th,td{
+    padding: 15px 0px ;
+}
+
+table,th,td{
+    border: 0.2px solid #f3f3f3;
+    border-collapse: collapse;
+}
+
+td{
+    text-indent: 10%;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa-eye{
+    cursor: pointer;
+    color: rgb(226, 193, 121);
+}
+
+
+.fa-trash{
+    cursor: pointer;
+    color: rgb(36, 36, 36);
+}
+
+.fa-pen-to-square{
+    cursor: pointer;
+    color: rgb(173, 173, 173);
+}
+
+i:hover{
+    transform: scale(1.1);
+}
+
+
+ /* =================css for view modal =================*/
+
+.view_modal ,.add_modal ,.update_modal{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.movie_details{
+    height: 80vh;
+    width: 80%;
+    background-color: white;
+    padding:30px;
+    font-family: segoe UI;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+}
+
+.poster{
+    height: 60vh;
+    width: 25%;
+    margin-top: 30px;
+}
+
+
+.movie_content{
+    height: 60vh;
+    width: 75%;
+    /* background-color: yellow; */
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: segoe UI;
+    font-size: 17px;
+}
+
+.image{
+    height: 60vh ;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.image>img{
+    width: 100%;
+}
+
+/* ==============css for add Modal============== */
+
+.add_modal{
+    display: none;
+}
+
+.modal_child{
+    width: 50%;
+    height: 60vh;
+    background-color: white;
+    padding: 30px;
+    font-family: segoe UI;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+}
+
+.modal_child > h1{
+    color:#7f7f7f;
+}
+
+.form {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 2%;
+    font-family: segoe UI;
+
+}
+
+.inp{
+    width: 49%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #f9dfff;
+    text-indent: 20px;
+    outline: none;
+    color:#7f7f7f;
+
+}
+
+.inp:focus{
+    box-shadow: 0 0 2px grey;
+}
+
+
+.url{
+    width: 100%;
+}
+
+.big_inp{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #f9dfff;
+}
+
+.form_btn{
+    width: 100%;
+}
+
+
+/* ===============css for pagination ===============*/
+
+.pagination{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.page_control{
+    width: 80%;
+    display: flex;
+    column-gap: 10px ;
+    align-items: center;
+}
+
+a{
+    padding: 10px;
+
+}
+a:hover{
+    background-color: lightgray;
+}
+
+.page_details
+{
+    width: 30%;
+    font-family: segoe UI;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+

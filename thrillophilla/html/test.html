@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flip the gallery</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .one{
+            margin: 100px;
+            padding: 100px;
+            height: 300px;
+            width: 10%;
+            background-color: red;
+            background-image: url('./images/gall_1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-duration: 20s;
+            animation-play-state: running;
+            animation-delay: 2s;
+            /* transform: rotate(180deg); */
+            
+        }
+
+        .first{
+            font-size: 17px;
+            font-family: segoe UI;
+            font-weight: bold;
+            animation-name: rotate;
+        }
+
+        @keyframes rotate {
+            25%{
+                transform: rotateY(180deg);
+                background-image: url("images/gall_2\ \(mirror\).png");
+                
+            }
+            50%{
+                transform: rotateY(0deg);
+                background-image: url('./images/gall_1.jpg');
+           
+            }
+            75%{
+                transform: rotateY(180deg);
+                background-image: url("images/gall_2\ \(mirror\).png");
+               
+            }
+            100%{
+                transform: rotateY(0deg);
+                background-image: url('./images/gall_1.jpg');
+             
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">
+        
+        </div>
+    </section>
+</body>
+</html>

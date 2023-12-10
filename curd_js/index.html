@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>curd_project</title>
+</head>
+<body>
+    
+    <!-- <header class="header">
+
+        <div class="logo">
+            Movie Zone
+        </div>
+
+    </header> -->
+
+    <!-- The view Modal; -->
+
+    <div class="view_modal" id="view_modal">
+
+        <div class="movie_details">
+
+          <div class="close">
+            <i class="fa-solid fa-circle-xmark " onclick="closeModal('view_modal')" ></i>
+          </div>
+
+            <h1 id="title">the titel of the Movies</h1>
+
+            <div class="details">
+
+                <div class="poster">
+                    <div class="image">
+                        <img id="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ekKSPPttm4uESL544oC24Naw64I8UcBw6Q&usqp=CAU">
+                    </div>
+
+                </div>
+
+                <div class="movie_content">
+                    <div>
+                        <h3>Storeline</h3> 
+                        <p class="store_line" id="plot">
+                            A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</p>
+                    </div>
+                    <div>
+                        <h3>Actor</h3>
+                        <p class="actor" id="actor">Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang</p>
+                    </div>
+                    <div>
+                        <h3>Director</h3>
+                         <p class="director" id="director">James Cameron</p>
+                    </div>
+                    <div>
+                        <h3>Genre</h3>
+                         <p class="genre" id="genre">Action, Adventure, Fantasy</p>
+                    </div>
+                    <div>
+                        <h3>Imdb Rating</h3>
+                        <p class="imdbRating" id="imdbRating">7.9</p>
+                    </div>
+                    <div>
+                        <h3>Runtime</h3>
+                        <p class="runtime" id="runtime">162 min</p>
+                    </div>
+                    <div>
+                        <h3>Release Date</h3>
+                        <p class="release_date" id="release_date">18 Dec 2009</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Adding of the new movie -->
+
+    <div class="add_modal" id="add_modal">
+        <div class="modal_child">
+            <div class="close">
+                <i class="fa-solid fa-circle-xmark " onclick="closeModal('add_modal')" ></i>
+              </div>
+            <h1 >Add New Movie</h1>
+            <form id="add_form">
+                <div class="form ">
+
+                    <input type="text" placeholder="Enter Title" class="inp" id="add_title">
+                    <input type="text" placeholder="Enter Genre seprated by ',' " class="inp" id="add_genre">
+                    <input type="number" placeholder="Enter duration" class="inp" id="add_duration">
+                    <input type="text" placeholder="Enter Release Date" class="inp" id="add_Release_date" onfocus="convertToDate()">
+                    <input type="text" placeholder="Enter Actor seprated by ',' " class="inp" id="add_actor">
+                    <input type="text" placeholder="Enter ImdbRating" class="inp" id="add_imdbrating">
+                    <input type="url" placeholder="Enter poster Url" class="inp url" id="add_url" >
+
+                    <textarea placeholder="Enter Storyline" class="big_inp  inp" id="add_storyline"></textarea>
+
+                    <button type="button" class="btn form_btn" onclick="createMovie()">Create Movie</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- the Edit the movie -->
+
+    <div class="update_modal" id="update_modal">
+        <div class="modal_child">
+            <div class="close">
+                <i class="fa-solid fa-circle-xmark " onclick="closeModal('update_modal')" ></i>
+              </div>
+            <h1 >Edit Movie</h1>
+            <form id="add_form">
+                <div class="form ">
+
+                    <input type="text" placeholder="Enter Title" class="inp" id="update_title">
+                    <input type="text" placeholder="Enter Genre seprated by ',' " class="inp" id="update_genre">
+                    <input type="number" placeholder="Enter duration" class="inp" id="update_duration">
+                    <input type="text" placeholder="Enter Release Date" class="inp" id="update_Release_date" onfocus="convertToDate()">
+                    <input type="text" placeholder="Enter Actor seprated by ',' " class="inp" id="update_actor">
+                    <input type="text" placeholder="Enter ImdbRating" class="inp" id="update_imdbrating">
+                    <input type="url" placeholder="Enter poster Url" class="inp url" id="update_url" >
+
+                    <textarea placeholder="Enter Storyline" class="big_inp  inp" id="update_storyline"></textarea>
+
+                    <button type="button" class="btn form_btn" onclick="UpdateMovie()">Update Movie</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- the data -->
+
+    <section class="data">
+
+        <div class="data_header">
+
+            <h1>All Movies</h1>
+            <button  class="btn" onclick="openAddModal()">add New Movies</button>
+
+        </div>
+
+        <div class="data_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr no.</th>
+                        <th>Title</th>
+                        <th>Release Data</th>
+                        <th>Generes</th>
+                        <th>Duration</th>
+                        <th>IMDB Rating</th>
+                        <th>Language</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="movies">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="pagination">
+            <div class="page_control">
+                <button class="btn" onclick="prevPage()">
+                    <i class="fa-solid fa-backward"></i>
+                    Previous
+                </button>
+
+                <div class="pages" id="pages">
+                    
+                </div>
+                <button class="btn" onclick="nextPage()">
+                    Next
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+
+                <input type="number" class="inp page_number"  placeholder="Enter Page Numeber" id="page_number" onkeyup="openPage(this.value)">
+            </div>
+            <div class="page_details">
+                <p>Page <span id="currentPage">1</span> of <span  id="totalPage"></span></p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
