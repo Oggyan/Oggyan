@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Armstrong number</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        // let num = 530;
+        // let countnum = 0;
+        // let count =0;
+        // let copynum = num ;
+        // let sum = 0 ;
+
+        // while(countnum!=0){
+        //     countnum = parseInt(countnum/10);
+        //     count++;
+        // }
+        // while(num != 0 ){
+        //     let rem = num % 10;
+        //     num = parseInt(num/10);
+
+        //     sum  = sum + (rem**count);
+        // }
+        // if (copynum === sum)
+        // {
+        //     console.log("Armstrong Number")
+        // }
+        // else{
+        //     console.log("Not a Arrmstrong Number");
+        // }
+
+
+        let arr= [1,2,3,4,5,6,7,8,9,10];
+        let sum =0 ;
+        let size = arr.length;
+ 
+        while(size--){
+            sum = sum + arr[size];
+        
+        }
+        let n = arr[9];
+        console.log(n)
+        let sum1 = (n *(n+1))/2;
+        console.log(sum1);
+        console.log(sum);
+    </script>
+</body>
+</html>

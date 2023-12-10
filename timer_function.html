@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Timer Function</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .message{
+            height: 50px;
+            width: 20%;
+            background-color: yellowgreen;
+            position: fixed;
+            top:90vh;
+            right: -20%;
+            text-align: center;
+            line-height: 50px;
+            font-family: segoe UI;
+            transition: .3s;
+        }
+        input{
+            height:50px;
+            width: 30%;
+            margin: 30px;
+            text-indent: 10px;
+            /* margin: 30px; */
+        }
+        button{
+            height: 50px;
+            width: 10%;
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            /* margin: 30px; */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <button onclick="validInput()">Submitt</button>
+
+    <div class="message" id="message">
+
+    </div>
+
+    <div class="ball" id="ball">
+
+    </div>
+
+    <script>
+
+        //setTimeout => it perform a functionality only once 
+        //eg . showing the ads in the web
+       
+        
+
+        // function validInput(){
+
+        //     if(document.getElementById("name").value===""){
+        //         document.getElementById("message").innerText = "Name is required";
+        //         document.getElementById("message").style.right = "0%";
+        //         setTimeout(function(){
+        //             document.getElementById("message").style.right = "-20%";
+        //         },3000)
+
+        //     }
+        // }
+
+        //set interval
+
+        // let margin = 0;
+        // let move = setInterval(function(){
+        //     if(margin <= 50){
+                
+        //         margin += 10
+        //         document.getElementById("ball").style.marginLeft = margin+"0px" ;
+        //     }
+        //     else{
+        //         clearInterval(move);
+
+        //     }
+        // },500)
+
+        //requestAnimationFrame
+        
+        let margin = 0;
+
+        function move(){
+            margin += 10;
+
+            document.getElementById("ball").style.marginLeft = margin + "px";
+
+            if(margin<=500){
+                //move();
+                requestAnimationFrame(move);
+            }
+
+        }
+
+        requestAnimationFrame(move);
+
+    </script>
+</body>
+</html>
