@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fade_Carsouel</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .carousel{
+            width: 100%;
+            height: 700px;
+            background-color: red;
+            position: relative;
+        }
+
+        .carousel_child{
+            height: 700px;
+            width: 100%;
+            background-color: green;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+
+           
+        }
+    
+
+    .carousel_child:nth-child(1){
+        background-image: url('https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        /* z-index: 5; */
+        animation-name: slide-1;
+    }
+    .carousel_child:nth-child(2){
+        background-image: url('https://images.pexels.com/photos/1687575/pexels-photo-1687575.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-position: 0px -400px;
+        /* z-index: 4; */
+        animation-name: slide-2;
+    }
+    .carousel_child:nth-child(3){
+        background-image: url('https://images.pexels.com/photos/1134857/pexels-photo-1134857.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-position: 0px -670px;
+        /* z-index: 3; */
+        animation-name: slide-3;
+    }
+    .carousel_child:nth-child(4){
+        background-image: url('https://images.pexels.com/photos/301489/pexels-photo-301489.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-position: 0px -300px;
+        /* z-index: 2; */
+        animation-name: slide-4;
+    }
+    .carousel_child:nth-child(5){
+        background-image: url('https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        /* z-index: 1; */
+        animation-name: slide-5;
+    }
+     @keyframes slide-5{
+        20%{
+            opacity: 1;
+            /* margin-left: -100%;  */
+          
+          }
+        40%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }
+        60%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        80%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        100%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+            }
+     @keyframes slide-4{
+        20%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+          
+          }
+        40%{
+            opacity: 1;
+            /* margin-left: -100%;  */
+           }
+        60%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        80%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        100%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+            }
+     @keyframes slide-3{
+        20%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+          
+          }
+        40%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }
+        60%{
+            opacity: 1;
+            /* margin-left: -100%;  */
+           }             
+        80%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        100%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+            }
+     @keyframes slide-2{
+        20%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+          
+          }
+        40%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }
+        60%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        80%{
+            opacity: 1;
+            /* margin-left: -100%;  */
+           }             
+        100%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+            }
+     @keyframes slide-1{
+        20%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+          
+          }
+        40%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }
+        60%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        80%{
+            opacity: 0;
+            /* margin-left: -100%;  */
+           }             
+        100%{
+            opacity: 1;
+            /* margin-left: -100%;  */
+           }            
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel">
+        <div class="carousel_child"></div>
+        <div class="carousel_child"></div>
+        <div class="carousel_child"></div>
+        <div class="carousel_child"></div>
+        <div class="carousel_child"></div>
+    </div>
+    
+</body>
+</html>

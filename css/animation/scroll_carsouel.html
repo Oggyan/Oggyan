@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animataion</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .one{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+
+            animation-name: slider;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-play-state:running;
+        }
+
+        @keyframes slider {
+            25%{
+               margin-top: 600px;
+                margin-left: 0px;
+            }
+            50%{
+                margin-left: 900px;
+                margin-top: 600px;
+
+            }
+            75%{
+                margin-top: 0px;
+                margin-left: 900px;
+            }
+            /* 100%{
+                margin-left:1000px ;
+            } */
+        }
+
+        .banner{
+            height: 1200px;
+            width: 100%;
+            /* background-color: red; */
+            overflow: hidden;
+        }
+
+        .slider{
+            width: 500%;
+            height: 1000px;
+            /* background-color: green; */
+            display: flex;
+
+            animation-name: slider;
+            animation-iteration-count: infinite;
+            animation-duration: 16s;
+            /* animation-play-state: running; */
+        }
+
+        @keyframes slider {
+            12.5%{
+
+                margin-left: -100%;
+            }
+            25%{
+                margin-left: -100%;
+
+            }
+            37.5%{
+
+                margin-left: -200%;
+            }
+            50%{
+                margin-left: -200%;
+            }
+            67.5%{
+
+                margin-left: -300%;
+            }
+            75%{
+                margin-left: -300%;
+            }
+            87.5%{
+
+                margin-left: -400%;
+            }
+            100%{
+                margin-left: -400%;
+            }
+            
+        }
+        .ele{
+            width: 20%;
+            height: 1000px;
+            background-color: yellow;
+            font-size: 100px;
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .ele:nth-child(1){
+            background-image: url('https://images.pexels.com/photos/268782/pexels-photo-268782.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        }
+        .ele:nth-child(2){
+            background-image: url('https://images.pexels.com/photos/1576369/pexels-photo-1576369.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        }
+        .ele:nth-child(3){
+            background-image: url('https://images.pexels.com/photos/6312534/pexels-photo-6312534.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        }
+        .ele:nth-child(4){
+            background-image: url('https://images.pexels.com/photos/6029507/pexels-photo-6029507.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        }
+        .ele:nth-child(5){
+            background-image: url('https://images.pexels.com/photos/268782/pexels-photo-268782.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+
+        <div class="slider">
+
+            <div class="ele">
+                
+            </div>
+            <div class="ele">
+                
+            </div>
+            <div class="ele">
+                
+            </div>
+            <div class="ele">
+                
+            </div>
+            <div class="ele">
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
